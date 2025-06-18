@@ -1,0 +1,16 @@
+{
+  "name": "responsive-frontend-demo",
+  "version": "1.0.0",
+  "description": "Demonstration of a responsive frontend using HTML and CSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8080 ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

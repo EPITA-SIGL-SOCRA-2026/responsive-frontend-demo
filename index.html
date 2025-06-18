@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Sans cette ligne, pas de media queries ! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Démonstration Media Queries</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    /* Par défaut, aucun background */
+    .banner {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    /* Entre 400px et 900px : gradient */
+    @media screen and (min-width: 400px) and (max-width: 899px) {
+      .banner {
+        display: flex;
+        background: linear-gradient(135deg, #045112, #56ef48);
+        font-size: 2rem;
+      }
+    }
+
+    /* À partir de 900px : image */
+    @media screen and (min-width: 900px) {
+      .banner {
+        display: flex;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/forest.jpg');
+        background-size: cover;
+        background-position: center;
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    🌿 Bienvenue sur So-Close
+  </div>
+
+  <main style="padding: 1rem;">
+    <p>Redimensionnez votre fenêtre pour observer l'effet des media queries :</p>
+    <ul>
+      <li><strong>&lt; 400px</strong> : pas de bannière</li>
+      <li><strong>400px → 899px</strong> : bannière dégradée</li>
+      <li><strong>≥ 900px</strong> : image de jardin en arrière-plan</li>
+    </ul>
+  </main>
+
+</body>
+
+</html>
